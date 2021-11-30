@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
   },
   MbtiImage : {
     width : 300,
-    height : 300,
+    height : 350,
     justifyContent : "center",
     alignContent : "center"
   },

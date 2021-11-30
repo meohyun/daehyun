@@ -11,10 +11,20 @@ export default function List({navigation,route}){
 
   useEffect(()=>{
 
-    setTimeout(()=>{
+      navigation.setOptions({
+          title : "MBTI 목록",
+          headerStyle :{
+              backgroundColor  :"#000",
+              borderBottomColor : "#fff",
+              borderBottomWidth : 1,
+          },
+          headerTintColor: "#fff"
+      })
 
-      let mbti_data = data.mbti;
-      setState(mbti_data)
+      setTimeout(()=>{
+
+       let mbti_data = data.mbti;
+       setState(mbti_data)
 
     },1000)
     
@@ -34,7 +44,7 @@ export default function List({navigation,route}){
 
 const styles = StyleSheet.create({
     container:{
-        color : "#fff"
+        backgroundColor : "#000"
     },
     listcontainer :{
         marginTop:10,

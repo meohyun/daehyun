@@ -9,6 +9,7 @@ export default function mbti_list({content,navigation}){
             <Image style={styles.image} source={{uri:content.image}}></Image>
             <View style={styles.text}>
                 <Text style ={styles.Title}>{content.name}</Text>
+                <Text style ={styles.Title}>{content.title}</Text>
             </View>
         </TouchableOpacity>
 
@@ -18,22 +19,33 @@ export default function mbti_list({content,navigation}){
 const styles = StyleSheet.create({
     list:{
         flex : 1,
-        color : "#fff"
+        flexDirection : "row",
+        margin : 10,
+        color : "#fff",
+        borderBottomWidth : 1,
+        borderColor : "#FFF",
+        paddingBottom:10,
+        marginTop : 10,
+  
+        
     },
     image : {
         flex :1,
         padding : 10,
-        height : 70,
-        width : 70,
+        height : 150,
+        width : 30,
+        borderRadius : 10,
     },
     text : {
         flex : 2,
         color : "#fff"
+
     },
     Title : {
         fontSize : 20,
-        color: "#000",
-        textAlign : "center"
+        textAlign : "center",
+        justifyContent : "center",
+        color : "#fff"
     }
 
 
