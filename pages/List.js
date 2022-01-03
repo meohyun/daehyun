@@ -4,7 +4,7 @@ import {View,StyleSheet,ScrollView} from 'react-native'
 import Mbti from '../components/mbti_list'
 import data from '../data.json'
 
-export default function List({navigation,route}){
+export default function List({navigation}){
 
 
   const [state,setState] = useState([])
