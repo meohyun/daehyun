@@ -5,6 +5,19 @@ import { TouchableOpacity,StyleSheet, Text, View,ScrollView} from 'react-native'
 
 export default function Main({navigation}) {
 
+  useEffect(()=>{
+
+    navigation.setOptions({
+      title : "",
+      headerStyle :{
+        backgroundColor : "#000",
+        height : 80,
+      }
+      
+    })
+
+  },[])
+
     
   return (
     <ScrollView style={styles.container}>
@@ -14,7 +27,7 @@ export default function Main({navigation}) {
       </View>
       <View style={styles.button_container}>
       <TouchableOpacity style = {styles.button01}><Text style={styles.buttonText}>MBTI 궁합보기</Text></TouchableOpacity>
-        <TouchableOpacity style = {styles.button01} onPress={()=>{navigation.navigate('List')}}><Text style={styles.buttonText}>MBTI 사전</Text></TouchableOpacity>
+        <TouchableOpacity style = {styles.button01} onPress={()=>{navigation.navigate('List')}}><Text style={styles.buttonText}>MBTI 목록</Text></TouchableOpacity>
       </View>
     </ScrollView>
 
